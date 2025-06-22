@@ -1,4 +1,4 @@
 package com.example.notify.presentation
 
-class NotesEvent {
+class NotesListScreen {
 }
