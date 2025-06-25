@@ -8,6 +8,11 @@ android {
     namespace = "com.example.notify"
     compileSdk = 34
 
+    buildFeatures{
+        viewBinding=true
+        compose=true
+    }
+
     defaultConfig {
         applicationId = "com.example.notify"
         minSdk = 21
@@ -37,9 +42,6 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
-    buildFeatures {
-        compose = true
-    }
     composeOptions {
         kotlinCompilerExtensionVersion = "1.5.1"
     }
@@ -52,6 +54,9 @@ android {
 
 dependencies {
 
+    implementation(libs.androidx.compose.runtime)
+    implementation(libs.androidx.lifecycle.viewmodel.compose)
+    implementation(libs.androidx.material3)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
@@ -61,6 +66,7 @@ dependencies {
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
     implementation(libs.androidx.room.runtime)
+    implementation(libs.material)
     kapt(libs.androidx.room.compiler)
     implementation(libs.androidx.room.ktx)
 

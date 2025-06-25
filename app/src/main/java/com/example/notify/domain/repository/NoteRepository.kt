@@ -1,5 +1,6 @@
 package com.example.notify.domain.repository
 
+import com.example.notify.domain.model.Note
 import kotlinx.coroutines.flow.Flow
 
 interface NoteRepository {
